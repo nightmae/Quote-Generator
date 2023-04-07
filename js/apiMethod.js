@@ -12,11 +12,12 @@ function adjustPositions() {
 }
 
 function generateQuote() {
-  const url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote";
+  const url = "https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote";
   const script = document.createElement("script");
   script.src = url;
   document.body.appendChild(script);
 }
+
 
 function parseQuote(data) {
   rand.innerHTML = data.quoteText;
