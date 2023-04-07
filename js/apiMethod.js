@@ -12,7 +12,7 @@ function adjustPositions() {
 }
 
 function generateQuote() {
-  const url = "https://api.quotable.io/random?tags=technology,famous-quotes";
+  const url = "https://api.quotable.io/random";
   fetch(url)
     .then(response => response.json())
     .then(data => parseQuote(data))
