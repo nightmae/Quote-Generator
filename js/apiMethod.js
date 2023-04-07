@@ -12,18 +12,19 @@ function adjustPositions() {
 }
 
 function generateQuote() {
-  const url = "https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote";
-  const script = document.createElement("script");
-  script.src = url;
-  document.body.appendChild(script);
+  const url = "https://api.quotable.io/random?tags=technology,famous-quotes";
+  fetch(url)
+    .then(response => response.json())
+    .then(data => parseQuote(data))
+    .catch(error => console.error(error));
 }
-
 
 function parseQuote(data) {
-  rand.innerHTML = data.quoteText;
-  guy.innerHTML = `<i>${data.quoteAuthor}</i>`;
+  rand.innerHTML = data.content;
+  guy.innerHTML = `<i>${data.author}</i>`;
   adjustPositions(); // Call adjustPositions after updating the text contents
 }
+
 
 window.addEventListener("resize", adjustPositions);
 adjustPositions();
