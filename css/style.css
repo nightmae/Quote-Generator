@@ -1,0 +1,130 @@
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    background-color: rgb(10, 10, 10);
+    color: white;
+    overflow-y: hidden;
+    background-size: cover;
+    background-position: center;
+    background: url(https://images.unsplash.com/photo-1524351543168-8e38787614e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    min-height: 100vh;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    z-index: -1;
+  }
+  
+#rand {
+    position:absolute;
+    left: 50%;
+    top: 25%;
+    transform:translateX(-50%);
+    font-size: 24px;
+    font-weight:600;
+    letter-spacing: 1px;
+    background-color: rgb(50, 50, 50);
+    padding: 10px;
+    color: #546A7B;
+    text-align:center;
+}
+
+.Wrapper {
+    position: relative;
+    height: 900px;
+}
+
+#randBtn {
+    position:relative;
+    left: 50%;
+    margin-top: calc(-10% + 30px);
+    transform:translateX(-50%);  
+    padding: 10px;
+    outline:none;
+    border:none;
+    border-radius: 6px;
+    background-color:rgb(30,30,30);
+    color:#BDB246;
+    font-weight: 500;
+}
+
+#randBtn:hover {
+    opacity: 0.9;
+    cursor:pointer;
+}
+
+#randBtn:active {
+    opacity:0.7;
+}
+#guyWho {
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+  }
+  #footer {
+    position: absolute;
+    bottom:0%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  .hidden {
+    transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+  }
+  
+footer span {
+    text-decoration:none !important;
+    
+    font-family: Poppins;
+    color:white;
+}
+#close {
+    position:absolute;
+    height: 35px;
+    right: 10px;
+    top: 0.25em
+}
+#close:hover {
+    cursor:pointer;
+}
+footer a {
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: none;
+    cursor:pointer;
+  }
+  
+  footer a:active {
+    text-decoration: none;
+  }
+  
+  footer a:visited {
+    text-decoration: none;
+  }
+  
+
+  @keyframes slideOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
